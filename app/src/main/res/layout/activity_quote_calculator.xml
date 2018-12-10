@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuoteCalculator">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/PriceView"
+            android:textSize="30sp"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="PriceView" />
+
+        <TextView
+            android:id="@+id/MakeView"
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="10dp"
+            android:text="MakeView" />
+
+        <TextView
+            android:id="@+id/ModelView"
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="10dp"
+            android:text="ModelView" />
+
+        <TextView
+            android:id="@+id/EngineView"
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="10dp"
+            android:text="EngineView" />
+
+        <TextView
+            android:id="@+id/YearView"
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="10dp"
+            android:text="YearView" />
+
+        <TextView
+            android:id="@+id/NoClaimsView"
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="10dp"
+            android:text="NoClaimsView" />
+
+        <TextView
+            android:id="@+id/ValueView"
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="10dp"
+            android:text="ValueView" />
+
+        <TextView
+            android:id="@+id/CountyView"
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="10dp"
+            android:text="CountyView" />
+
+        <TextView
+            android:id="@+id/AgeView"
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="10dp"
+            android:text="AgeView" />
+
+        <TextView
+            android:id="@+id/TelephoneView"
+            android:layout_width="300dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="10dp"
+            android:text="TelephoneView" />
+
+        <TextView
+            android:id="@+id/EmailView"
+            android:layout_width="300dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="10dp"
+            android:text="EmailView" />
+
+        <TextView
+            android:id="@+id/Info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="For more infomation call us on :" />
+
+        <Button
+            android:id="@+id/callBtm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="021 000 00 00" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
+

@@ -1,0 +1,133 @@
+<resources>
+    <string name="app_name">Insurance Calculator</string>
+
+    <string-array name="makes_array">
+        <item>Choose</item>
+        <item>Audi</item>
+        <item>BMW</item>
+        <item>Ford</item>
+        <item>Mazda</item>
+        <item>Opel</item>
+        <item>Volkswagen</item>
+    </string-array>
+
+    <string-array name="audi_array">
+        <item>A3</item>
+        <item>A4</item>
+        <item>A5</item>
+        <item>A6</item>
+        <item>A7</item>
+    </string-array>
+
+    <string-array name="bmw_array">
+        <item>1 Series</item>
+        <item>3 Series</item>
+        <item>4 Series</item>
+        <item>5 Series</item>
+        <item>7 Series</item>
+    </string-array>
+
+    <string-array name="ford_array">
+        <item>Fiesta</item>
+        <item>Focus</item>
+        <item>Mondeo</item>
+        <item>Mustang</item>
+    </string-array>
+
+    <string-array name="mazda_array">
+        <item>3</item>
+        <item>6</item>
+        <item>CX-3</item>
+        <item>CX-5</item>
+    </string-array>
+
+    <string-array name="opel_array">
+        <item>Astra</item>
+        <item>Corsa</item>
+        <item>Insignia</item>
+    </string-array>
+
+    <string-array name="volkswagen_array">
+        <item>Golf</item>
+        <item>Passat</item>
+        <item>Polo</item>
+        <item>Scirocco</item>
+        <item>Touareg</item>
+    </string-array>
+
+    <string-array name="audi_engines">
+        <item>1.6 FSI</item>
+        <item>1.8 TFSI</item>
+        <item>1.9 TDI</item>
+        <item>2.0 TDI</item>
+    </string-array>
+
+    <string-array name="bmw_engines">
+        <item>2.0i</item>
+        <item>2.0d</item>
+        <item>3.0i</item>
+        <item>3.0d</item>
+    </string-array>
+
+    <string-array name="ford_engines">
+        <item>1.0 Ecoboost</item>
+        <item>1.5 Ecoboost</item>
+        <item>1.6 Duratorq</item>
+        <item>2.0 Duratorq</item>
+    </string-array>
+
+    <string-array name="mazda_engines">
+        <item>1.5 SkyActive-G</item>
+        <item>2.0 SkyActive-G</item>
+        <item>2.0 SkyActive-D</item>
+    </string-array>
+
+    <string-array name="opel_engines">
+        <item>1.4 TwinPort</item>
+        <item>1.6 TwinPort</item>
+        <item>1.7 CDTI</item>
+        <item>2.0 CDTI</item>
+    </string-array>
+
+    <string-array name="volkswagen_engines">
+        <item>1.6 FSI</item>
+        <item>1.8 T</item>
+        <item>1.9 TDI</item>
+        <item>2.0 TDI</item>
+    </string-array>
+
+    <string-array name="years_array">
+        <item>2018</item>
+        <item>2017</item>
+        <item>2016</item>
+        <item>2015</item>
+        <item>2014</item>
+        <item>2013</item>
+        <item>2012</item>
+        <item>2011</item>
+        <item>2010</item>
+        <item>2009</item>
+        <item>2008</item>
+    </string-array>
+
+    <string-array name="noClaims_array">
+        <item>Less than 1</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7+</item>
+    </string-array>
+
+    <string-array name="counties_array">
+        <item>Connacht</item>
+        <item>Leinster</item>
+        <item>Munster</item>
+        <item>Ulster</item>
+    </string-array>
+    <string name="title_activity_quote_calculator">QuoteCalculator</string>
+
+
+</resources>
