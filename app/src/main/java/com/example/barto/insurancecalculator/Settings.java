@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 
@@ -109,4 +110,11 @@ public class Settings extends AppCompatActivity {
     }
         return(super.onOptionsItemSelected(item));
     }
+
+    OnSwipeTouchListener onSwipeTouchListener = new OnSwipeTouchListener(Settings.this) {
+        @Override
+        public void onSwipeLeft() {
+            startActivity(new Intent(Settings.this, MainActivity.class));
+        }
+    };
 }

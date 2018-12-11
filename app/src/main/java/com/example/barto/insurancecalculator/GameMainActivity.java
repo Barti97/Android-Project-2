@@ -31,4 +31,11 @@ public class GameMainActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         startActivity(new Intent(this, GameActivity.class));
     }
+
+    OnSwipeTouchListener onSwipeTouchListener = new OnSwipeTouchListener(GameMainActivity.this) {
+        @Override
+        public void onSwipeRight() {
+            startActivity(new Intent(GameMainActivity.this, MainActivity.class));
+        }
+    };
 }

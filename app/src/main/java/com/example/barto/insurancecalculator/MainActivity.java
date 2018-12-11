@@ -319,7 +319,6 @@ public class MainActivity extends AppCompatActivity {
         }
         else {
         }
-//fsadkjfkldsajklf
         return;
     }
 
@@ -341,5 +340,18 @@ public class MainActivity extends AppCompatActivity {
     }
         return(super.onOptionsItemSelected(item));
     }
+
+    OnSwipeTouchListener onSwipeTouchListener = new OnSwipeTouchListener(MainActivity.this) {
+        @Override
+        public void onSwipeLeft() {
+            startActivity(new Intent(MainActivity.this, GameMainActivity.class));
+        }
+
+        @Override
+        public void onSwipeRight() {
+            startActivity(new Intent(MainActivity.this, Settings.class));
+        }
+    };
+
 
 }
