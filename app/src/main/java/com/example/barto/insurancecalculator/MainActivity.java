@@ -2,23 +2,28 @@ package com.example.barto.insurancecalculator;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
+import android.widget.Toast;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
@@ -77,10 +82,17 @@ public class MainActivity extends AppCompatActivity {
     private final int TELEPHONE = 8;
     private final int EMAIL = 9;
 
+    private float x1,y1;
+    private float x2,y2;
+
+    private RelativeLayout rl;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        rl = findViewById(R.id.rl);
 
         data = new String[10];
 
@@ -246,29 +258,23 @@ public class MainActivity extends AppCompatActivity {
         checkBox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(checkBox.isChecked())
-                {
+                if (checkBox.isChecked()) {
                     getQuote.setEnabled(true);
-                }
-                else
-                {
+                } else {
                     getQuote.setEnabled(false);
                 }
             }
         });
         getQuote = findViewById(R.id.quoteBtm);
         getQuote.setEnabled(false);
-        getQuote.setOnClickListener(new View.OnClickListener()
-        {
+        getQuote.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 String value = valueIn.getText().toString();
                 String age = ageIn.getText().toString();
                 String telephone = telephoneIn.getText().toString();
                 String email = emailIn.getText().toString();
-                if(makeChosen != null && modelChosen != null && engineChosen != null && yearChosen != null && claimsBonusChosen != null && countyChosen != null && value != null && age != null && telephone != null && email != null)
-                {
+                if (makeChosen != null && modelChosen != null && engineChosen != null && yearChosen != null && claimsBonusChosen != null && countyChosen != null && value != null && age != null && telephone != null && email != null) {
                     data[MAKE] = makeChosen;
                     data[MODEL] = modelChosen;
                     data[ENGINE] = engineChosen;
@@ -285,6 +291,17 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        OnSwipeTouchListener onSwipeTouchListener = new OnSwipeTouchListener(MainActivity.this)
+        {
+            @Override
+            public void onSwipeRight() {
+                Log.e("Swiping ", "right");
+                startActivity(new Intent(MainActivity.this, Settings.class));
+                finish();
+            }
+        };
+        rl.setOnTouchListener(onSwipeTouchListener);
 
     }
     private void startQuoteCalculator()
@@ -323,35 +340,27 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) { switch(item.getItemId()) {
-        case R.id.InsuranceCalculator:
-            MainActivity.this.recreate();
-            return(true);
-        case R.id.Game:
-            startActivity(new Intent(MainActivity.this, GameMainActivity.class));
-            return(true);
-        case R.id.Settings:
-            Intent in = new Intent( MainActivity.this, Settings.class);
-            startActivity(in);
-            return(true);
-        case R.id.Exit:
-            finish();
-            return(true);
-    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId())
+        {
+            case R.id.InsuranceCalculator:
+                MainActivity.this.recreate();
+                return(true);
+            case R.id.Game:
+                startActivity(new Intent(MainActivity.this, GameMainActivity.class));
+                return(true);
+            case R.id.Settings:
+                Intent in = new Intent( MainActivity.this, Settings.class);
+                startActivity(in);
+                return(true);
+            case R.id.Exit:
+                finish();
+                return(true);
+        }
         return(super.onOptionsItemSelected(item));
     }
 
-    OnSwipeTouchListener onSwipeTouchListener = new OnSwipeTouchListener(MainActivity.this) {
-        @Override
-        public void onSwipeLeft() {
-            startActivity(new Intent(MainActivity.this, GameMainActivity.class));
-        }
-
-        @Override
-        public void onSwipeRight() {
-            startActivity(new Intent(MainActivity.this, Settings.class));
-        }
-    };
-
 
 }
+
+
